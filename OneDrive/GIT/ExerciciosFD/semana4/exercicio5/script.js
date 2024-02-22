@@ -44,3 +44,5 @@ while (contador <= 4){
 }
 
 console.log(`Total de usuários que avaliou a série como ruim: ${totalRuins}`);
+
+
