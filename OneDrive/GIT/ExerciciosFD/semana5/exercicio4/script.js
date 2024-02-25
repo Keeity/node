@@ -2,16 +2,17 @@
 // calcule e imprima a soma de todos os elementos do 
 // array. Utilize o reduce para realizar a soma.
 
+const prompt = require("prompt-sync") ()
+const numeros = []
 
-const arrayNumeros = [7,9,4,12,21,3]
+for (let n = 0; n < 5; n++) {
+    const numero = parseInt(prompt (`Digite o ${n + 1}o numero: `)); //parseInt serve para garantir que vai sair como número. Daí, ao invés de ir direto ao numeros.push, tem que declarar o numero e depois chamar o push.
+    numeros.push(numero)
+        }
 
-// for (let n = 0; n < arrayNumeros.length; n++) {
-//     console.log(`O número do array é ${arrayNumeros[n]}`)
-// }
-
-const resultado = arrayNumeros.reduce( (soma, atual) => {
-    return soma + atual
-}, 0
+const resultado = numeros.reduce( (soma, atual) => {
+    return soma + atual //tem que ter o return. tentei sem e não deu
+}, 0 //aqui diz onde começa
 )
 
 console.log(`A soma dos números é ${resultado}`)

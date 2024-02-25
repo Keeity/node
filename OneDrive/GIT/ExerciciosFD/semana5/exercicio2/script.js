@@ -4,13 +4,13 @@ Usando o mesmo array do exercício anterior, adicione mais uma fruta ao array fr
 
 //const prompt = require("prompt-sync")();
 
-const arrayFrutas = [];
+const frutas = []
 
 for (let i = 0; i < 3; i++) {
-    let fruta = prompt("Indique o nome da fruta: ");
-
-arrayFrutas.push(fruta);
+    frutas.push(prompt("Indique o nome da fruta: "))
 } 
+//
+frutas.push(prompt("Digite uma fruta adicional: "))
+frutas.shift() //Se quisesse tirar a 2a fruta, colocaria assim> frutas.slice(1,2) --> não conta o segundo índice
 
-arrayFrutas.shift();
-console.log(arrayFrutas);
+console.log(frutas)

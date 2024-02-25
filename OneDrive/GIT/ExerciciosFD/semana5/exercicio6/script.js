@@ -5,10 +5,17 @@
 // para realizar a operação de filtragem.
 
 
-const numeros = [7,9,4,12,21,3];
+
+const prompt = require("prompt-sync") ()
+const numeros = []
+
+for (let n = 0; n < 5; n++) {
+    const numero = parseInt(prompt (`Digite o ${n + 1}o numero: `)); //parseInt serve para garantir que vai sair como número. Daí, ao invés de ir direto ao numeros.push, tem que declarar o numero e depois chamar o push.
+    numeros.push(numero)
+        }
 
 const resultado = numeros.filter((n) => {
     if (n % 2 == 0) {return true}
 })
 
-console.log(resultado)
+console.log(`O novo array com números pares é: ${resultado}`)

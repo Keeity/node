@@ -5,8 +5,16 @@
 // Desafio: utilize a biblioteca prompt-sync 
 // para receber cada um dos 5 números.
 
-const arrayNumeros = [1,3,5,7,9]
+const prompt = require("prompt-sync") ()
+const numeros = []
 
-for (let n = 0; n < arrayNumeros.length; n++) {
-    console.log(`O número do array é ${arrayNumeros[n]}`)
+for (let n = 0; n < 5; n++) {
+const numero = parseInt(prompt (`Digite o ${n + 1}o numero: `)); //parseInt serve para garantir que vai sair como número. Daí, ao invés de ir direto ao numeros.push, tem que declarar o numero e depois chamar o push.
+numeros.push(numero)
+    }
+
+    //para imprimir, pode fazer com for ou map 
+for (let n = 0; n < 5; n++) {
+    console.log(`O ${n + 1} número do array é ${numeros[n]}`)
 }
+
