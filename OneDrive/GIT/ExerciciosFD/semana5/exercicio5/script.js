@@ -9,9 +9,9 @@
 
 //const numeros = [7,9,4,12,21,3]
 const numerosOrdenados = [7, 9, 4, 12, 21, 3];
-let resultado = numerosOrdenados.sort ((a,b) => {a-b});
-//
+//let resultado = numerosOrdenados.sort ((a,b) => {return a-b});
+// tentei fazer sem return e não deu certo!
 // (a,b) => {a-b}    é o mesmo que 
 // function (a,b) { if( a> b) return 1; if (a < b) return -1; return 0;}
 
-console.log(resultado)
+console.log(numerosOrdenados.sort ((a,b) => {return a - b }))
