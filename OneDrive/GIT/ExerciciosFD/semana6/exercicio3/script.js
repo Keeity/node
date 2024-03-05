@@ -24,9 +24,7 @@ async function fetchData() {
         console.error('Erro ao buscar o arquivo data.JSON:', error);
     }
 }
-
-// Chamar a função para buscar os dados
-fetchData();
+fetchData();// Chamar a função para buscar os dados
 
 //async function arquivoJson ()
 //let divUsuarios = document.querySelector("#usuarios")

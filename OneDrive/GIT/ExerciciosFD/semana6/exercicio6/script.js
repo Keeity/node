@@ -8,3 +8,23 @@
 // forma: “logradouro, complemento - bairro - localidade/uf”
 // o cep_informado será passado por prompt pelo usuário.
 
+function getEndereco () {
+    let cep_informado = prompt("Informe o CEP:");
+
+fetch(`https://viacep.com.br/ws/${cep_informado}/json`)
+  .then(response => {
+   return response.json();
+  })
+  .then(data => {
+    alert (`${data.logradouro}, ${data.complemento} - ${data.bairro} - ${data.localidade}/${data.uf}`);
+    })
+ 
+  .catch(() => {
+    });
+
+//     .catch(function(error) {
+//       console.log('Erro na solicitação: ' + error.message);
+//     });
+ }
+
+getEndereco();

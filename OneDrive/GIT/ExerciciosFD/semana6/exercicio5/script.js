@@ -15,3 +15,14 @@
 // (opcional) Caso queira uma visualização melhor coloque na tag img o 
 // atributo width: Ex: width='200'
 
+fetch('https://api.thecatapi.com/v1/images/search?limit=10')
+  .then(response => {
+   return response.json();
+  })
+  .then(data => {
+    data.forEach(item => {
+      document.write(`<img src='${item.url}' width='200'/><br />`);
+    });
+  })
+  .catch(() => {
+    });
