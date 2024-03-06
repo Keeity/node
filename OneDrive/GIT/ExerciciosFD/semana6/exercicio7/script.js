@@ -34,3 +34,4 @@ fetch(`https://viacep.com.br/ws/${cep_informado}/json`)
 getEndereco();
 
 localStorage.setItem()
+
