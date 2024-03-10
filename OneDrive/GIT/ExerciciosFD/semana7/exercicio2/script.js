@@ -7,9 +7,14 @@ class Produto {
     quantidade
     
 
-constructor(nome, preco, quantidade){ //constructor dentro da classe
+constructor(valorNome, valorPreco, valorQuantidade){ //constructor dentro da classe
 this.nome = valorNome
 this.preco = valorPreco
 this.quantidade = valorQuantidade
 }
+
 }
+
+const arroz = new Produto ("arroz",20,30)
+console.log(arroz)
+

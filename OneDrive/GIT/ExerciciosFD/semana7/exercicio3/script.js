@@ -20,11 +20,16 @@ this.preco = valorPreco
 this.quantidade = valorQuantidade
 }
 
-vender(quantidadeVendida){
-    if(quantidadeVendida > this.quantidade) {console.log("Estoque Insuficiente")
+Vender(quantidadeVendida){ //método tem que iniciar em letra maiúscula
+    if(quantidadeVendida > this.quantidade) {
+      console.log("Estoque Insuficiente")
 return  //return significa que para aqui. 
 }
 this.quantidade -= quantidadeVendida // é o mesmo que  this.quantidade = this.quantidade - quantidadeVendida        }
   }
 
 }
+
+const arroz = new Produto ("arroz",20,30)
+arroz.Vender(3);
+console.log(arroz)

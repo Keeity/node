@@ -12,11 +12,13 @@ nome;
 idade;
 profissao;
 
-constructor (valorNome , valorIdade, valorProfissao) {
-this.nome = valorNome
-this.idade = valorIdade
-this.profissao = valorProfissao
+constructor (nome, idade, profissao) {
+this.nome = nome
+this.idade = idade
+this.profissao = profissao
+}
 }
 
 
-}
+const pessoaKeeity = new Pessoa("Keeity",37,"advogada")
+console.log(pessoaKeeity)

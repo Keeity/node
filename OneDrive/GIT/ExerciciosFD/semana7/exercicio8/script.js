@@ -24,10 +24,10 @@ class Pessoa {
       
     }
 
-    class Cliente extends Pessoa {
+    class Cliente extends Pessoa { //extends pessoa - herda de pessoa
     telefone;
     email;
-    clienteDesde  //deve ser uma string no formato “ANO-MES-DIA”
+    clienteDesde;  //deve ser uma string no formato “ANO-MES-DIA”
     
     constructor (valorNome , valorIdade, valorProfissao, valorTelefone, valorEmail, valorClienteDesde) {
         super(valorNome , valorIdade, valorProfissao); // super puxa as informações da classe mãe
@@ -44,6 +44,6 @@ class Pessoa {
 }
     }
 
-// let keeity = new Cliente("Keeity",37,"Advogada",479776535,"keeity@email.com","17-09-1986")
+const clienteKeeity = new Cliente("Keeity",37,"Advogada",479776535,"keeity@email.com","2023-09-17")
 
-// console.log(keeity)
+console.log(clienteKeeity)

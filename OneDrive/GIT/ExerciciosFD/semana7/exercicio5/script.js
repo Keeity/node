@@ -24,20 +24,21 @@ this.preco = valorPreco
 this.quantidade = valorQuantidade
 }
 
-vender(quantidadeVendida){
+Vender(quantidadeVendida){
     if(quantidadeVendida > this.quantidade) {console.log("Estoque Insuficiente")
 return  //return significa que para aqui. 
 }
 this.quantidade -= quantidadeVendida // é o mesmo que  this.quantidade = this.quantidade - quantidadeVendida        }
-if(quantidadeVendida>1) {console.log (`Houve a venda de ${quantidadeVendida} unidades de ${this.nome}`)}
-else{console.log (`Houve a venda de ${quantidadeVendida} unidade de ${this.nome}`)}
-}
+console.log (`Houve a venda de ${quantidadeVendida} unidade(s) de ${this.nome}`)
 
-repor(quantidadeReposta){
-        this.quantidade += quantidadeReposta
-      }
+  }
 
-mostrarEstoque(){
+  Repor(quantidadeReposta){
+    this.quantidade += quantidadeReposta
+  }
+
+
+MostrarEstoque(){
         if(this.quantidade>1){
             console.log(`O produto ${this.nome} possui ${this.quantidade} unidades disponíveis)`)
         } 
@@ -49,3 +50,11 @@ mostrarEstoque(){
       }
     }
 
+    const arroz = new Produto ("arroz",20,30)
+    console.log(arroz)
+
+arroz.Vender(3);
+arroz.Repor(5)
+
+arroz.MostrarEstoque()
+console.log(arroz)
