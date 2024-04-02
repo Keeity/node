@@ -8,6 +8,7 @@ const publicDirectory = path.join(__dirname, 'public');
 
 // Middleware para servir arquivos estáticos
 app.use(express.static(publicDirectory));
+//assim, vai usar os arquivos que estão na pasta public criada. Coloquei o arquivo Amendoim2.png ali de teste. Se eu quiser acessá-lo, basta escrever http://localhost:3000/amendoim2.png
 
 app.get('/', (req, res) => {
     res.send('Seja Bem Vindo(a)!');
